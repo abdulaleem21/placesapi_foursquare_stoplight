@@ -303,8 +303,8 @@ paths:
   /venues/trending:
     get:
       summary: Your GET endpoint
-      tags: []
-     
+      tags:
+        - venues
       operationId: get-venues-trending
       description: Returns the list of venues with the most people currently checked in near the specified location.
       parameters:
