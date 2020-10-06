@@ -302,7 +302,7 @@ paths:
                     response: {}
   /venues/trending:
     get:
-      summary: Your GET endpoint
+      summary: Trending Venues
       tags:
         - venues
       operationId: get-venues-trending
