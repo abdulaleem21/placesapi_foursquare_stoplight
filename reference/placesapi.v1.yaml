@@ -300,6 +300,45 @@ paths:
                       errorDetail: Must provide parameter ll or userll or near
                       requestId: 5f7c6fe80b052b3087064067
                     response: {}
+  /venues/trending:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-venues-trending
+      description: Returns the list of venues with the most people currently checked in near the specified location.
+      parameters:
+        - schema:
+            type: number
+            example: '4074224,-73.99386'
+          in: query
+          name: ll
+          description: |-
+            The latitude and longitude coordinates of the user's location. <br/>Format: **latitude(num),longitude(num)**
+            <br/>**required** unless `near` is provided
+        - schema:
+            type: string
+            example: Chicago
+          in: query
+          name: near
+          description: |-
+            The city near to which the venues are to be returned. 
+            <br/>**required** unless `ll` is provided.
+        - schema:
+            type: integer
+            maximum: 100000
+            example: 250
+          in: query
+          name: radius
+          description: 'Limits the venues within this radius of specified location. Units are in **meters**.<br/>**Note**: Only valid for requests that use `categoryID` or `query`'
+        - schema:
+            type: integer
+            example: 15
+            maximum: 50
+          in: query
+          name: limit
+          description: Number of results to return
+      
 components:
   schemas: {}
   securitySchemes:
