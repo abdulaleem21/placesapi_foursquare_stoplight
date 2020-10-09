@@ -743,7 +743,7 @@ paths:
         name: VENUE_ID
         in: path
         required: true
-        description: 'Unique ID of a venue. Call the /venues/search endpoint to get a venue ID. '
+        description: 'Unique ID of a venue. Call the `/venues/search` endpoint to get a venue ID. '
     get:
       summary: Search similar venues
       tags:
